@@ -18,6 +18,8 @@ In order to increase their product consumers Organic world needs a solution that
 - The Product page should display the account dropdown button with logout, list of products in a card grid format of tree cards per row. Every card should consist of Quantity, ‘Add to cart’ buttons.
 - The Account page should consist of information about the user which can be updated by user.
 - The cart page should consist of list of products added and their quantities and price in a table format and features like delete a product, update a product quantity,also a checkout button.
+- Use Express to create the backend of the application.
+- postgrew as database should be used 
 
 ## The roles in this application are
 
@@ -29,39 +31,20 @@ In order to increase their product consumers Organic world needs a solution that
 - Material
 - Jasmine
 - Protractor
-
-## PREREQUISITES
-
-  1. Install dependencies npm install
-  2. Run the backend server `node server.js` which shall run on port:8761
-  3. Run the frontend `npm run start` which shall run on port:4200  
+- nodejs
+- express
+- typescript
+- postgres
 
 ## API ENDPOINTS
   
-  1. For the products('Authorization' header with Bearer token required)
-     - GET    - http://localhost:8761/products/all          - get all products
-     - GET    - http://localhost:8761/products/{category}   - get products in a category  
-     - GET    - http://localhost:8761/products/search/{id}  - get a particular product
+  1. For the products
+     - GET    - http://localhost:3000/products/all          - get all products
+     - GET    - http://localhost:3000/products/{category}   - get products in a category  
+     - GET    - http://localhost:3000/products/search/{id}  - get a particular product
 
-  2. For the customers('Authorization' header with Bearer token required)
-     - PUT    - http://localhost:8761/customers/:id         - update customer details
-     - GET    - http://localhost:8761/customers?email=      - get a customer using email
-     - POST   - http://localhost:8761/customers             - add a customer
-
-  3. For Order('Authorization' header with Bearer token required)
+  2. For Order
      - POST   - http://localhost:8761/orders                - save a new order
      - GET    - http://localhost:8761/orders?customerId=    - get a customer orders
 
-  4. For login
-     - POST   - http://localhost:8761/auth/login            - authenticate user and create authentication token
 
-  5. For Register
-     - POST   - http://localhost:8761/auth/register         - create new users
-
-## Instructions
-
-1. Your are expecting to write code in the given boilerplate so that you can achieve all  high level requirements
-2. All the detailed instructions are given inside the project
-3. Understand the comments in the project and write code
-4. After writing the code unit test your code by running `npm run test` or `ng test` and end-to-end test by running `npm run e2e` or `ng e2e` provided backend server is running.
-5. Given db.json file which acts as backend server with all APIs, please do not make any changes in db.json
